@@ -177,11 +177,6 @@ snippet select
 	<select name="${1:some_name}" id="${2:$1}">
 		<option value="${3:option}">${4:$3}</option>
 	</select>${5}
-snippet table
-	<table border="${1:0}">
-		<tr><th>${2:Header}</th></tr>
-		<tr><th>${3:Data}</th></tr>
-	</table>${4}
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 
@@ -221,6 +216,21 @@ snippet label
 	<span class="label">${1}</span>
 snippet [
 	[% ${1} %]
+snippet table
+	<table class="table table-hover table-condensed">
+		<thead>
+			<tr>
+				<th class="right">${1}</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="right"></td>
+				<td></th>
+			</tr>
+		</tbody>
+	</table>${2}
 #--------------
 # for js
 snippet fun
