@@ -239,17 +239,16 @@ snippet fun
 	}
 snippet post
 	$.post(
-		'[% base %]/${1:uri}',
-		JSON.stringify({ ${2:body} }),
-		function(data){
-			var json = JSON.parse(data);
+		'[% base %]/${1}',
+		{ ${2} },
+		function(json){
 			if ( json.ok ){
-				${3:ok}
+				${3}
 			}else{
 				alert( json.errmsg );
 			}
-		}
-	);
+		},'json'
+	);${4}
 snippet panel
 	<div class="panel panel-default">
 		<div class="panel-heading">${1}</div>
