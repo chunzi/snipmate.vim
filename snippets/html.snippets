@@ -233,6 +233,8 @@ snippet box
 	</div>
 snippet hr
 	<hr />
+snippet br
+	<br />
 snippet span
 	<span>${1}</span>
 snippet td
@@ -284,7 +286,9 @@ snippet post
 	);${4}
 snippet panel
 	<div class="panel panel-default">
-		<div class="panel-heading">${1}</div>
+		<div class="panel-heading">
+			<h3 class="panel-title">${1}</h3>
+		</div>
 		<div class="panel-body">
 			${2}
 		</div>
