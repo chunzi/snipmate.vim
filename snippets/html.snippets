@@ -157,45 +157,38 @@ snippet fieldset
 		${3}
 	</fieldset>
 snippet form
-	<form class="form-horizontal" role="form">
-	  <div class="form-group">
-		<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-		<div class="col-sm-10">
-		  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="" class="col-sm-2 control-label"></label>
+			<div class="col-sm-10">
+				<input type="" class="form-control" id="" placeholder="" autocomplete="off" />
+			</div>
 		</div>
-	  </div>
-	  <div class="form-group">
-		<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-		<div class="col-sm-10">
-		  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<label><input type="checkbox" name="" autocomplete="off" /> Remember me</label>
+				</div>
+			</div>
 		</div>
-	  </div>
-	  <div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-		  <div class="checkbox">
-			<label>
-			  <input type="checkbox"> Remember me
-			</label>
-		  </div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<textarea name="" class="form-control" rows="3"></textarea>
+			</div>
 		</div>
-	  </div>
-	  <div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-		  <textarea class="form-control" rows="3"></textarea>
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-primary">提交</button>
+			</div>
 		</div>
-	  </div>
-	  <div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-		  <button type="submit" class="btn btn-default">Sign in</button>
-		</div>
-	  </div>
 	</form>
 snippet click
 	$('#btn-${1}').on( 'click', function(){
 		${2}
 	});
-snippet input
-	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
 snippet link
 	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
 snippet mailto
@@ -343,3 +336,10 @@ snippet container
 	</div><!-- end of container -->
 snippet href
 	<a href="[% uri_base %]/${1}">${2}</a>
+snippet input
+	<div class="form-group">
+		<label for="${1}" class="col-sm-2 control-label">${2}</label>
+		<div class="col-sm-10">
+			<input id="${3}" name="${4}" type="text" class="form-control" value="" autocomplete="off" />
+		</div>
+	</div>
