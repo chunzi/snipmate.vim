@@ -96,6 +96,8 @@ snippet slurp
 	my $${1:var};
 	{ local $/ = undef; local *FILE; open FILE, "<${2:file}"; $$1 = <FILE>; close FILE }${3}
 snippet s
+	$self
+snippet ss
 	my $${1:self} = shift;${2}
 snippet flog
 	say flog ['%s', ${1} ];
