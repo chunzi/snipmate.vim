@@ -71,9 +71,11 @@ snippet xfor
 	${1:expression} for @${2:array};${3}
 # Foreach Loop
 snippet for
-	foreach my $${1:x} (@${2:array}) {
-		${3:# body...}
+	for my $${1:x} ( @${2:array} ) {
+		${3}
 	}
+snippet map
+	map { ${2} } @${1};
 # Foreach Loop One-line
 snippet fore
 	${1:expression} foreach @${2:array};${3}
