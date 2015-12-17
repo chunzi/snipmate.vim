@@ -103,3 +103,5 @@ snippet ss
 	my $self = shift;${1}
 snippet flog
 	say flog ['%s', ${1} ];
+snippet now
+	my $now  = DateTime->now( time_zone => 'Asia/Shanghai' );
