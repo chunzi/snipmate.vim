@@ -375,24 +375,26 @@ snippet mute
 	<span class="text-muted">${1}</span>${2}
 snippet row
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-xs-4">
 			${1}
 		</div>
-		<div class="col-md-6">
-			${2}
+		<div class="col-xs-4">
 		</div>
-	</div><!-- end of row -->
+		<div class="col-xs-4">
+		</div>
+	</div>
 snippet container
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				${1}
-			</div>
-			<div class="col-md-6">
-				${2}
-			</div>
-		</div><!-- end of row -->
-	</div><!-- end of container -->
+	<div class="row">
+		<div class="col-xs-4">
+			${1}
+		</div>
+		<div class="col-xs-4">
+		</div>
+		<div class="col-xs-4">
+		</div>
+	</div>
+	</div>
 snippet href
 	<a href="[% request.uri_base %]/${1}" class="btn btn-link">${2}</a>
 snippet input
