@@ -114,8 +114,6 @@ snippet head
 		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
 		${2}
 	</head>
-snippet title
-	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
 snippet script
 	<script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
@@ -434,4 +432,13 @@ snippet card
 		<a href="#" class="card-link">Card link</a>
 		<a href="#" class="card-link">Another link</a>
 	  </div>
+	</div>
+snippet title
+	<div class="weui_cells_title">${1}</div>
+snippet access
+	<div class="weui_cells weui_cells_access">
+		<a class="weui_cell" href="">
+			<div class="weui_cell_bd weui_cell_primary"><p>${1}</p></div>
+			<div class="weui_cell_ft"></div>
+		</a>
 	</div>
