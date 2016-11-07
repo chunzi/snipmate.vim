@@ -283,7 +283,7 @@ snippet td
 snippet fa
 	<i class="fa fa-${1}"></i>${2}
 snippet but
-	<button class="btn btn-primary-outline">${1}</button>
+	<button class="btn btn-outline-primary">${1}</button>
 snippet code
 	<span class="code">${1}</span>
 snippet badge
@@ -320,7 +320,7 @@ snippet fun
 	}
 snippet post
 	$.post(
-		'[% base %]/${1}',
+		'[% request.uri_base %]/${1}',
 		{ ${2} },
 		function(json){
 			if ( json.ok ){
@@ -415,30 +415,60 @@ snippet fg
 	</div>
 snippet card
 	<div class="card">
-	  <img class="card-img-top" data-src="holder.js/100%x180/?text=Image cap" alt="Card image cap">
-	  <div class="card-header">
-		Featured
-	  </div>
-	  <div class="card-block">
-		<h4 class="card-title">${1}</h4>
-		<p class="card-text">${2}</p>
-	  </div>
-	  <ul class="list-group list-group-flush">
-		<li class="list-group-item">Cras justo odio</li>
-		<li class="list-group-item">Dapibus ac facilisis in</li>
-		<li class="list-group-item">Vestibulum at eros</li>
-	  </ul>
-	  <div class="card-block">
-		<a href="#" class="card-link">Card link</a>
-		<a href="#" class="card-link">Another link</a>
-	  </div>
+	<div class="card-block">
+		${1}
+	</div>
 	</div>
 snippet title
-	<div class="weui_cells_title">${1}</div>
-snippet access
-	<div class="weui_cells weui_cells_access">
-		<a class="weui_cell" href="">
-			<div class="weui_cell_bd weui_cell_primary"><p>${1}</p></div>
-			<div class="weui_cell_ft"></div>
-		</a>
+	<div class="weui-cells__title">${1}</div>
+snippet tips
+	<div class="weui-cells__tips">${1}</div>
+snippet cells
+	<div class="weui-cells">
+		${1}
 	</div>
+snippet cell
+	<a class="weui-cell weui-cell_access" href="">
+		<div class="weui-cell__bd">
+			<p>${1}</p>
+		</div>
+		<div class="weui-cell__ft">
+		</div>
+	</a>
+snippet qq
+	<div class="weui-cell">
+		<div class="weui-cell__hd"><label class="weui-label">${1}</label></div>
+		<div class="weui-cell__bd">
+			<input name="" class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入"/>
+		</div>
+	</div>
+snippet wbut
+	<div class="weui-btn-area">
+		<button type="submit" class="weui-btn weui-btn_primary">${1}</button>
+	</div>
+snippet preview
+	<div class="weui-form-preview">
+		<div class="weui-form-preview__hd">
+			<label class="weui-form-preview__label">付款金额</label>
+			<em class="weui-form-preview__value">¥2400.00</em>
+		</div>
+		<div class="weui-form-preview__bd">
+		<p>
+			<label class="weui-form-preview__label">商品</label>
+			<span class="weui-form-preview__value">电动打蛋机</span>
+		</p>
+		<p>
+			<label class="weui-form-preview__label">标题标题</label>
+			<span class="weui-form-preview__value">名字名字名字</span>
+		</p>
+		<p>
+			<label class="weui-form-preview__label">标题标题</label>
+			<span class="weui-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</span>
+		</p>
+		</div>
+			<div class="weui-form-preview__ft">
+			<a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">操作</a>
+		</div>
+	</div>
+snippet rmb
+	¥
