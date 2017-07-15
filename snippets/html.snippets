@@ -428,12 +428,9 @@ snippet cells
 		${1}
 	</div>
 snippet cell
-	<a class="weui-cell weui-cell_access" href="">
-		<div class="weui-cell__bd">
-			<p>${1}</p>
-		</div>
-		<div class="weui-cell__ft">
-		</div>
+	<a class="weui-cell weui-cell_access" href="[% request.uri_base %]/">
+		<div class="weui-cell__bd"><p>${1}</p></div>
+		<div class="weui-cell__ft"></div>
 	</a>
 snippet qq
 	<div class="weui-cell">
@@ -475,11 +472,13 @@ snippet rmb
 snippet celld
 	<div class="weui-cells">
 		<div class="weui-cell">
-			<div class="weui-cell__bd">
-			</div>                 
+			<div class="weui-cell__bd">${1}</div>
+			<div class="weui-cell__ft">${2}</div>
 		</div>
 	</div>
 snippet navt
 	<nav class="navbar navbar-fixed-top">
 snippet navb
 	</nav><div class="navbar-above"></div>
+snippet img
+	<img src="${1}" class="rounded" />
