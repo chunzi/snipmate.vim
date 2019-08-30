@@ -320,17 +320,13 @@ snippet fun
 		${1}
 	}
 snippet post
-	$.post(
-		'[% uri_base %]/${1}',
+	$.post( '[% uri_base %]/${1}',
 		{ ${2} },
 		function(json){
 			if ( json.ok ){
 				${3}
-			}else{
-				alert( json.errmsg );
-			}
-		},'json'
-	);${4}
+			}else{ alert( json.errmsg ); }
+		},'json');${4}
 snippet h1
 	<h1>${1}</h1>
 snippet h2
@@ -477,3 +473,10 @@ snippet btnc
 	$('.btn').on('click', function(){
 		${1}
 	});
+snippet ctr
+	class="text-right"
+snippet ctl
+	class="text-left"
+snippet mb
+	<div class="text-muted">${1}</div>
+	<div class="text-15"></div>
