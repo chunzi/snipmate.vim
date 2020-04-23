@@ -459,8 +459,19 @@ snippet rmb
 snippet celld
 	<div class="weui-cells">
 		<div class="weui-cell">
-			<div class="weui-cell__bd">${1}</div>
-			<div class="weui-cell__ft">${2}</div>
+			<div class="weui-cell__bd">
+				${1}
+			</div>
+			<div class="weui-cell__ft"></div>
+		</div>
+	</div>
+snippet cella
+	<div class="weui-cells">
+		<div class="weui-cell weui-cell_access">
+			<div class="weui-cell__bd">
+				${1}
+			</div>
+			<div class="weui-cell__ft"></div>
 		</div>
 	</div>
 snippet navt
@@ -480,3 +491,25 @@ snippet ctl
 snippet mb
 	<div class="text-muted">${1}</div>
 	<div class="text-15"></div>
+snippet vue
+	var app = new Vue({
+		el: '#app',
+		data: {
+		},
+		filters: {
+			rmb: function( rmb ){
+				return parseFloat( rmb / 100 ).toFixed(2);
+			},
+		},
+		watch: {
+			hey: function(){
+			},
+		},
+		methods: {
+			save: function(){
+			},
+			cancel: function(){
+				side_close();
+			},
+		}
+	});
