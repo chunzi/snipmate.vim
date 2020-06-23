@@ -155,76 +155,21 @@ snippet fieldset
 		${3}
 	</fieldset>
 snippet form
-	<form id="form-${1}">
+	<form id="form">
+		<div class="form-group row">    
+		<label for="title" class="col-3 col-form-label text-right">标题</label>
+		<div class="col-6">
+			<input type="text" class="form-control" id="title" name="title" value="[% this.title %]" autocomplete="off" />
+		</div>
+		</div>
 
-	  <div class="form-group row">
-		<label for="title" class="col-sm-3 form-control-label">Title</label>
-		<div class="col-sm-9">
-		  <input type="text" class="form-control" id="title" name="title" placeholder="Title" autocomplete="off">
+		<div class="form-group row">
+		<div class="col-3"></div>
+		<div class="col-6">
+			<button type="submit" class="btn btn-primary px-4">保存</button>
+			<button type="reset" class="btn btn-light">取消</button>
 		</div>
-	  </div>
-
-	  <div class="form-group row">
-		<label for="password" class="col-sm-3 form-control-label">Password</label>
-		<div class="col-sm-9">
-		  <input type="password" class="form-control" id="password" name="password" placeholder="Password" autocomplete="off">
 		</div>
-	  </div>
-
-	  <div class="form-group row">    
-	    <label for="chandi" class="col-sm-3 form-control-label">产地</label>
-	    <div class="col-sm-9"> 
-	      <div class="input-group">       
-	        <input type="text" class="form-control" name="chandi" id="chandi" />
-	        <div class="input-group-addon">亩</div>
-	      </div>             
-	    </div>                 
-	  </div>
-
-	  <div class="form-group row">
-		<label class="col-sm-3">Radios</label>
-		<div class="col-sm-9">
-		  <div class="radio">
-			<label>
-			  <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-			  Option one is this and that&mdash;be sure to include why it's great
-			</label>
-		  </div>
-		  <div class="radio">
-			<label>
-			  <input type="radio" name="gridRadios" id="gridRadios2" value="option2">
-			  Option two can be something else and selecting it will deselect option one
-			</label>
-		  </div>
-		  <div class="radio disabled">
-			<label>
-			  <input type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-			  Option three is disabled
-			</label>
-		  </div>
-		</div>
-	  </div>
-	  <div class="form-group row">
-		<label class="col-sm-3">Checkbox</label>
-		<div class="col-sm-9">
-		  <div class="checkbox">
-			<label>
-			  <input type="checkbox"> Check me out
-			</label>
-		  </div>
-		</div>
-	  </div>
-	  <div class="form-group row">
-		<label for="notes" class="col-sm-3 form-control-label">备注</label>
-		<div class="col-sm-9">
-	      <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
-		</div>
-	  </div>
-	  <div class="form-group row">
-		<div class="col-sm-offset-3 col-sm-9">
-		  <button type="submit" class="btn btn-secondary">Sign in</button>
-		</div>
-	  </div>
 	</form>
 snippet notes
 	<div class="form-group row">
@@ -327,6 +272,16 @@ snippet post
 				${3}
 			}else{ alert( json.errmsg ); }
 		},'json');${4}
+snippet postj
+	$('#form').ajaxForm({      
+		type: 'post', dataType: 'json',
+		url: '[% uri_base %]/${1}',
+		success: function (json){
+			if ( json.ok ){
+				${2}
+			}else{ alert( json.errmsg ); }
+		}
+	});
 snippet h1
 	<h1>${1}</h1>
 snippet h2
